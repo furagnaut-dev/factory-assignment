@@ -1,9 +1,12 @@
 package factorymethod
 
 type Coffee interface{
+	Name() string
 	VolumeML() int
-	Description() string
-	Topping() string
-	SugarGram() int
 	Prepare() []PreparationStep
 }
+
+type PreparationStep struct {
+	Action string
+}
+
